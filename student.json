@@ -1,0 +1,66 @@
+[
+    {
+        "_id": 1,
+        "name": "Ravi",
+        "age": 19,
+        "course": "B.Tech",
+        "city": "Hyderabad",
+        "marks": 72
+    },
+    {
+        "_id": 2,
+        "name": "Anil",
+        "age": 22,
+        "course": "B.Sc",
+        "city": "Mumbai",
+        "marks": 85
+    },
+    {
+        "_id": 3,
+        "name": "Neha",
+        "age": 24,
+        "course": "M.Tech",
+        "city": "Delhi",
+        "marks": 91
+    },
+    {
+        "_id": 4,
+        "name": "Priya",
+        "age": 21,
+        "course": "B.Tech",
+        "city": "Chennai",
+        "marks": 78
+    },
+    {
+        "_id": 5,
+        "name": "Kiran",
+        "age": 23,
+        "course": "MBA",
+        "city": "Bangalore",
+        "marks": 88
+    },
+    {
+        "_id": 6,
+        "name": "Suresh",
+        "age": 20,
+        "course": "BCA",
+        "city": "Pune",
+        "marks": 69
+    },
+    {
+        "_id": 7,
+        "name": "Divya",
+        "age": 25,
+        "course": "MCA",
+        "city": "Hyderabad",
+        "marks": 95
+    },
+    {
+        "_id": 8,
+        "name": "Rahul",
+        "age": 18,
+        "course": "B.Sc",
+        "city": "Kolkata",
+        "marks": 64
+    }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloudinary Video Upload</title>
+</head>
+<body>
+
+  <h2>Upload Video</h2>
+  <input type="file" id="videoInput" accept="video/*">
+  <br><br>
+
+  <button onclick="uploadVideo()">Upload Video</button>
+
+  <h3>Uploaded Video:</h3>
+  <video id="videoPlayer" width="400" controls></video>
+
+  <p><strong>Video URL:</strong></p>
+  <p id="result"></p>
+
+  <script>
+    const CLOUD_NAME = "deaa3uyyp";
+    const UPLOAD_PRESET = "supriyashreya";
+
+    function uploadVideo() {
+      const file = document.getElementById("videoInput").files[0];
+
+      if (!file) {
+        alert("Please select a video");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", UPLOAD_PRESET);
+
+      fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/video/upload`, {
+        method: "POST",
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("result").innerText = data.secure_url;
+
+        const player = document.getElementById("videoPlayer");
+        player.src = data.secure_url;
+        player.load();
+
+        alert("Video uploaded successfully!");
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Video upload failed");
+      });
+    }
+  </script>
+
+</body>
+</html>
